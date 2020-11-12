@@ -8,8 +8,6 @@ class Run(Base):
     id = Column(Integer, primary_key=True)
     timestamp = Column(DateTime, default=datetime.now())
     data = Column(TEXT)
-    status = Column(String(20))
 
-    def __init__(self,  status, data=None):
+    def __init__(self, data):
         self.data = data
-        self.status = status
